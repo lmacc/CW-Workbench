@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" font-family="Segoe UI, system-ui, sans-serif">
+  <title>Wiring a Morse key to a PC microphone socket</title>
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e3e8ee"/>
+      <stop offset="0.5" stop-color="#a9b2bd"/>
+      <stop offset="1" stop-color="#6f7884"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8b95a4"/>
+    </marker>
+
+    <!-- 3.5 mm TRS plug, axis at y=150, tip pointing right -->
+    <g id="plug">
+      <rect x="470" y="133" width="112" height="34" rx="9" fill="#2b323d" stroke="#3d4553"/>
+      <path d="M492 138 V162 M502 138 V162 M512 138 V162 M522 138 V162" stroke="#3d4553" stroke-width="2"/>
+      <rect x="582" y="139" width="60" height="22" fill="url(#metal)"/>
+      <rect x="642" y="139" width="6" height="22" fill="#0b0d11"/>
+      <rect x="648" y="139" width="32" height="22" fill="url(#metal)"/>
+      <rect x="680" y="139" width="6" height="22" fill="#0b0d11"/>
+      <path d="M686 139 H712 Q728 139 728 150 Q728 161 712 161 H686 Z" fill="url(#metal)"/>
+    </g>
+
+    <!-- A PC's rear sound panel, mic socket in line with the plug -->
+    <g id="pc">
+      <rect x="772" y="54" width="164" height="190" rx="12" fill="#1b2028" stroke="#3d4553"/>
+      <text x="854" y="76" text-anchor="middle" fill="#8b95a4" font-size="11" font-weight="700" letter-spacing="1.2">PC SOUND SOCKETS</text>
+      <circle cx="806" cy="96" r="10" fill="#0b0d11" stroke="#4ea1ff" stroke-width="4"/>
+      <circle cx="806" cy="96" r="3" fill="#000"/>
+      <text x="828" y="100" fill="#8b95a4" font-size="12">line in</text>
+      <circle cx="806" cy="123" r="10" fill="#0b0d11" stroke="#5cc96b" stroke-width="4"/>
+      <circle cx="806" cy="123" r="3" fill="#000"/>
+      <text x="828" y="127" fill="#8b95a4" font-size="12">speakers</text>
+      <circle cx="806" cy="150" r="17" fill="none" stroke="#f472b6" stroke-width="2" opacity="0.35"/>
+      <circle cx="806" cy="150" r="10" fill="#0b0d11" stroke="#f472b6" stroke-width="4"/>
+      <circle cx="806" cy="150" r="3" fill="#000"/>
+      <text x="830" y="148" fill="#f472b6" font-size="13" font-weight="700">MIC</text>
+      <text x="830" y="163" fill="#f2b8d6" font-size="11">plug in here</text>
+      <path d="M736 150 H784" stroke="#8b95a4" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+    </g>
+  </defs>
+
+  <rect x="1" y="1" width="958" height="638" rx="16" fill="#171b22" stroke="#262c36"/>
+
+  <!-- ================================================================ STRAIGHT KEY -->
+  <g>
+    <text x="40" y="44" fill="#e7ebf0" font-size="13" font-weight="700" letter-spacing="1.4">STRAIGHT KEY, BUG OR SIDESWIPER</text>
+
+    <!-- key (side view) -->
+    <rect x="40" y="168" width="196" height="30" rx="7" fill="#262c36" stroke="#3d4553"/>
+    <rect x="168" y="136" width="14" height="32" rx="3" fill="#3d4553"/>
+    <polyline points="136,139 146,144 136,149 146,154 136,159 146,164" fill="none" stroke="#5b6574" stroke-width="2"/>
+    <rect x="100" y="150" width="10" height="18" rx="2" fill="#f5a524"/>
+    <rect x="68" y="116" width="8" height="14" fill="#9aa4b2"/>
+    <rect x="58" y="128" width="160" height="9" rx="4.5" fill="#9aa4b2"/>
+    <rect x="100" y="137" width="10" height="5" rx="1" fill="#f5a524"/>
+    <ellipse cx="72" cy="114" rx="30" ry="10" fill="#1d222a" stroke="#9aa4b2" stroke-width="2"/>
+    <text x="105" y="222" text-anchor="middle" fill="#f5a524" font-size="11">contact</text>
+    <circle cx="226" cy="176" r="5" fill="#0b0d11" stroke="#f5a524" stroke-width="3"/>
+    <circle cx="226" cy="190" r="5" fill="#0b0d11" stroke="#c9d1dc" stroke-width="3"/>
+
+    <!-- wires -->
+    <path d="M231 176 C 355 176, 420 78, 520 78 H 693 Q 705 78 705 90 V 139" fill="none" stroke="#f5a524" stroke-width="4" stroke-linecap="round"/>
+    <path d="M231 190 C 365 190, 430 104, 520 104 H 600 Q 612 104 612 116 V 139" fill="none" stroke="#c9d1dc" stroke-width="4" stroke-linecap="round"/>
+    <text x="300" y="70" fill="#f5a524" font-size="12">key contact</text>
+    <text x="330" y="208" fill="#c9d1dc" font-size="12">frame / common</text>
+
+    <use href="#plug"/>
+    <circle cx="705" cy="139" r="4.5" fill="#f5a524" stroke="#12151a" stroke-width="1.5"/>
+    <circle cx="612" cy="139" r="4.5" fill="#c9d1dc" stroke="#12151a" stroke-width="1.5"/>
+
+    <text x="612" y="186" text-anchor="middle" fill="#e7ebf0" font-size="11" font-weight="700" letter-spacing="1">SLEEVE</text>
+    <text x="612" y="201" text-anchor="middle" fill="#c9d1dc" font-size="11">common</text>
+    <text x="664" y="186" text-anchor="middle" fill="#e7ebf0" font-size="11" font-weight="700" letter-spacing="1">RING</text>
+    <text x="664" y="201" text-anchor="middle" fill="#5b6574" font-size="11">not used</text>
+    <text x="720" y="186" text-anchor="middle" fill="#e7ebf0" font-size="11" font-weight="700" letter-spacing="1">TIP</text>
+    <text x="720" y="201" text-anchor="middle" fill="#f5a524" font-size="11">contact</text>
+    <text x="526" y="224" text-anchor="middle" fill="#8b95a4" font-size="11">3.5 mm plug (mono or stereo)</text>
+
+    <use href="#pc"/>
+  </g>
+
+  <line x1="32" y1="268" x2="928" y2="268" stroke="#262c36"/>
+
+  <!-- ================================================================ IAMBIC PADDLE -->
+  <g transform="translate(0 270)">
+    <text x="40" y="44" fill="#e7ebf0" font-size="13" font-weight="700" letter-spacing="1.4">IAMBIC PADDLE</text>
+    <text x="172" y="44" fill="#8b95a4" font-size="12">needs a stereo microphone input</text>
+
+    <!-- paddle (front view) -->
+    <rect x="60" y="196" width="176" height="34" rx="7" fill="#262c36" stroke="#3d4553"/>
+    <rect x="129" y="146" width="14" height="50" rx="3" fill="#5b6574"/>
+    <rect x="104" y="92" width="18" height="104" rx="6" fill="#1d222a" stroke="#f5a524" stroke-width="2.5"/>
+    <rect x="150" y="92" width="18" height="104" rx="6" fill="#1d222a" stroke="#38bdf8" stroke-width="2.5"/>
+    <text x="113" y="82" text-anchor="middle" fill="#f5a524" font-size="12" font-weight="700">DIT</text>
+    <text x="159" y="82" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">DAH</text>
+    <text x="136" y="250" text-anchor="middle" fill="#8b95a4" font-size="11">thumb · common · finger</text>
+    <circle cx="226" cy="205" r="4" fill="#0b0d11" stroke="#f5a524" stroke-width="3"/>
+    <circle cx="226" cy="215" r="4" fill="#0b0d11" stroke="#38bdf8" stroke-width="3"/>
+    <circle cx="226" cy="225" r="4" fill="#0b0d11" stroke="#c9d1dc" stroke-width="3"/>
+
+    <!-- wires -->
+    <path d="M231 205 C 355 205, 420 70, 520 70 H 693 Q 705 70 705 82 V 139" fill="none" stroke="#f5a524" stroke-width="4" stroke-linecap="round"/>
+    <path d="M231 215 C 360 215, 425 90, 520 90 H 652 Q 664 90 664 102 V 139" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M231 225 C 365 225, 430 110, 520 110 H 600 Q 612 110 612 122 V 139" fill="none" stroke="#c9d1dc" stroke-width="4" stroke-linecap="round"/>
+    <text x="300" y="62" fill="#f5a524" font-size="12">dit</text>
+    <text x="352" y="128" fill="#38bdf8" font-size="12">dah</text>
+    <text x="330" y="236" fill="#c9d1dc" font-size="12">common</text>
+
+    <use href="#plug"/>
+    <circle cx="705" cy="139" r="4.5" fill="#f5a524" stroke="#12151a" stroke-width="1.5"/>
+    <circle cx="664" cy="139" r="4.5" fill="#38bdf8" stroke="#12151a" stroke-width="1.5"/>
+    <circle cx="612" cy="139" r="4.5" fill="#c9d1dc" stroke="#12151a" stroke-width="1.5"/>
+
+    <text x="612" y="186" text-anchor="middle" fill="#e7ebf0" font-size="11" font-weight="700" letter-spacing="1">SLEEVE</text>
+    <text x="612" y="201" text-anchor="middle" fill="#c9d1dc" font-size="11">common</text>
+    <text x="664" y="186" text-anchor="middle" fill="#e7ebf0" font-size="11" font-weight="700" letter-spacing="1">RING</text>
+    <text x="664" y="201" text-anchor="middle" fill="#38bdf8" font-size="11">dah</text>
+    <text x="720" y="186" text-anchor="middle" fill="#e7ebf0" font-size="11" font-weight="700" letter-spacing="1">TIP</text>
+    <text x="720" y="201" text-anchor="middle" fill="#f5a524" font-size="11">dit</text>
+    <text x="526" y="224" text-anchor="middle" fill="#8b95a4" font-size="11">3.5 mm stereo plug</text>
+
+    <use href="#pc"/>
+  </g>
+
+  <!-- ================================================================ NOTES -->
+  <line x1="32" y1="560" x2="928" y2="560" stroke="#262c36"/>
+  <text x="40" y="588" fill="#c4cbd6" font-size="13"><tspan font-weight="700" fill="#e7ebf0">Laptop with one headset socket?</tspan> Use a headset splitter cable and plug the key into its microphone leg.</text>
+  <text x="40" y="614" fill="#c4cbd6" font-size="13"><tspan font-weight="700" fill="#f87171">Never</tspan> connect the same key to a radio's key socket at the same time.</text>
+</svg>
